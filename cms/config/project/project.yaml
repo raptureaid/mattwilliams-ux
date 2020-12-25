@@ -1,0 +1,24 @@
+dateModified: 1608865556
+email:
+  fromEmail: $EMAIL_ADDRESS
+  fromName: $EMAIL_CONTACT
+  replyToEmail: $EMAIL_ADDRESS
+  template: null
+  transportSettings:
+    password: $EMAIL_PASSWORD
+    timeout: '10'
+    username: $EMAIL_USER
+  transportType: craft\mail\transportadapters\Gmail
+system:
+  edition: solo
+  live: true
+  name: $PRIMARY_SITE_NAME
+  retryDuration: 60
+  schemaVersion: 3.5.13
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
