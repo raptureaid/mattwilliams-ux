@@ -11,6 +11,13 @@
 */storage/*
 !*/storage/.gitkeep
 
+# ASSETS
+/cms/web/assets/*
+/cms/web/cpresources/*
+
+# BUILD FILES
+node_modules
+
 # MISC FILES
 .cache
 .DS_Store
