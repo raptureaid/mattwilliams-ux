@@ -1,0 +1,26 @@
+{
+  "author": {
+    "name": "Matt Williams",
+    "url": "https://github.com/raptureaid"
+  },
+  "browser": "/web/index.php",
+  "name": "docker-buildchain",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "debug": "gulp"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "2.26.13",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.2.2",
+    "postcss-import": "^14.0.0"
+  }
+}
