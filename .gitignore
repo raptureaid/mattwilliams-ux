@@ -11,6 +11,9 @@
 */storage/*
 !*/storage/.gitkeep
 
+# BUILD FILES
+node_modules
+
 # MISC FILES
 .cache
 .DS_Store
