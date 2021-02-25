@@ -1,0 +1,13 @@
+{% apply spaceless %}
+  {% set url = url ?? null %}
+  {% set platform = platform ?? null %}
+  {% set title = title ?? null %}
+
+  {% if url and platform %}
+    <a class="social-icon" href="{{ url(url) }}">
+      {{~ include('_components/svg/' ~ platform|lower, {
+          title: title
+        }) ~}}
+    </a>
+  {% endif %}
+{% endapply %}
