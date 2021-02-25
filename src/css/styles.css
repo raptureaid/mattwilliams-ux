@@ -9,6 +9,7 @@
  * classes
  *
  */
+ @import './base/base.css';
 
 /**
  * This injects any component classes registered by plugins.
@@ -23,6 +24,7 @@
  *
  */
 @import './components/global.css';
+@import './components/social-icons.css';
 
 /**
  * Include styles for individual pages
