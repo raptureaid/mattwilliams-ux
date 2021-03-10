@@ -9,7 +9,7 @@
  * classes
  *
  */
- @import './base/base.css';
+@import './base/base.css';
 
 /**
  * This injects any component classes registered by plugins.
@@ -24,7 +24,7 @@
  *
  */
 @import './components/global.css';
-@import './components/social-icons.css';
+@import './components/nav.css';
 
 /**
  * Include styles for individual pages
@@ -37,6 +37,12 @@
  *
  */
 @import 'tailwindcss/utilities';
+
+/**
+ * Custom utility styles
+ *
+ */
+@import './utilities/utilities.css';
 
 /**
  * Include vendor css.

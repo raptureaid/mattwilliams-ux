@@ -1,0 +1,29 @@
+.underline-from-center,
+.underline-from-left,
+.underline-from-right {
+  
+}
+
+
+.underline-from-center::after,
+.underline-from-left::after,
+.underline-from-right::after {
+  @apply block border-b-2 border-blue-800 mt-1 transform scale-x-0 hover:scale-x-100 transition-transform duration-300 ease-in-out;
+  content: '';
+}
+
+.underline-from-center:hover::after,
+.underline-from-left:hover::after,
+.underline-from-right:hover::after {
+  @apply scale-x-100;
+}
+
+.underline-from-center::after {
+  @apply origin-center;
+}
+.underline-from-left::after {
+  @apply origin-left;
+}
+.underline-from-right::after {
+  @apply origin-right;
+}

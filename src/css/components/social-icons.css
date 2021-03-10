@@ -1,6 +1,0 @@
-.social-icon {
-  @apply inline-block h-9 w-9 m-4 text-teal-900;
-}
-.social-icon:hover {
-  @apply text-blue-800;
-}

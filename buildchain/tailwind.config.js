@@ -22,6 +22,7 @@ module.exports = {
     options: {
       whitelist: [
         '../src/css/components/**/*.{css}',
+        '../src/css/utilities/**/*.{css}',
       ],
     },
   },
@@ -33,19 +34,33 @@ module.exports = {
       blue: colors.lightBlue,
       gray: colors.blueGray,
       teal: colors.teal,
+      white: colors.white,
     },
     fontFamily: {
       title: ['Righteous', ...defaultTheme.fontFamily.sans],
       title2: ['Quicksand', ...defaultTheme.fontFamily.sans],
     },
+    screens: {
+      '2xs': '360px',
+      'xs': '480px',
+      ...defaultTheme.screens,
+    },
     extend: {
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '6xl': '3rem',
+      },
       fontSize: {
         '6xl': '3.5rem',
         '7xl': '3.75rem',
         '8xl': '4.5rem',
         '9xl': '6rem',
         '10xl': '8rem', 
-      }
+      },
+      margin: {
+        '-full': '-100%',
+      },
     },
   },
   variants: {},

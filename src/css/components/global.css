@@ -8,3 +8,21 @@
 #main {
   background-color: transparent;
 }
+
+.GradientLockup_root__sBkgs {
+    grid-template-columns: 1fr minmax(-webkit-min-content,640px) 1fr;
+    grid-template-columns: 1fr minmax(min-content,640px) 1fr;
+}
+
+@media (min-width: 1024px) {
+  .GradientLockup_root__sBkgs {
+    grid-template-columns: 2rem 1fr 59.375% 2rem;
+    grid-template-rows: auto 2.25rem auto 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .GradientLockup_root__sBkgs {
+    grid-template-columns: 2rem 1fr 52.5% 2rem;
+  }
+}
