@@ -1,14 +1,18 @@
 <?php
 /**
-* General Configuration
-*
-* All of your system's general configuration settings go in here. You can see a
-* list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
-*
-* @see \craft\config\GeneralConfig
-*/
+ * General Configuration
+ *
+ * All of your system's general configuration settings go in here. You can see a
+ * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
+ *
+ * @see \craft\config\GeneralConfig
+ */
 
 use craft\helpers\App;
+
+$isDev = App::env('ENVIRONMENT') === 'dev';
+$isProd = App::env('ENVIRONMENT') === 'production';
+
 return [
   // Global settings
   '*' => [
@@ -18,10 +22,10 @@ return [
       '@webroot' => App::env('WEB_ROOT_PATH'),
     ],
     'allowUpdates' => (bool)App::env('ALLOW_UPDATES'),
-    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
+    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES') ?: $isDev,
     'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
-    'cpTrigger' => App::env('CP_TRIGGER'),
-    'devMode' => (bool)App::env('DEV_MODE'),
+    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    'devMode' => (bool)App::env('DEV_MODE') ?: $isDev,
     'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
     'resourceBasePath' => App::env('WEB_ROOT_PATH').'/cpresources',
     'securityKey' => App::env('SECURITY_KEY'),
@@ -34,6 +38,7 @@ return [
     ],
     'defaultTokenDuration' => 'P2W',
     'defaultWeekStartDay' => 0,
+    'disallowRobots' => !$isProd,
     'enableCsrfProtection' => true,
     'errorTemplatePrefix' => 'errors/',
     'generateTransformsBeforePageLoad' => true,
@@ -51,16 +56,11 @@ return [
       'default' => App::env('PRIMARY_SITE_URL')
     ],
   ],
-
   // Dev environment settings
-  'dev' => [
-    'disallowRobots' => true,
-  ],
+  'dev' => [],
 
   // Staging environment settings
-  'staging' => [
-    'disallowRobots' => true,
-  ],
+  'staging' => [],
 
   // Production environment settings
   'production' => [],

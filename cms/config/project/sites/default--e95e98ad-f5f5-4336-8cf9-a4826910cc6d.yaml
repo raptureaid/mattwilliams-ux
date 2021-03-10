@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Primary site'
+name: $PRIMARY_SITE_NAME
 primary: true
-siteGroup: 1280bf5a-625e-4e5a-87f7-bae7ef97110c
+siteGroup: 4ce8fce1-9127-4152-be2a-d5cd1a3db080 # mattwilliams-ux
 sortOrder: 1
