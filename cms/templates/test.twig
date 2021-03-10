@@ -1,26 +1,179 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Matt Williams - User experience designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <style>
       .angled {
-        clip-path: polygon(0 0, 100% 0%, calc(50vw - 3rem) 100%, 0 100%);
-        width: calc(50vw + 3rem);
+          clip-path: polygon(0 0, 100% 0%, 100% calc(50vh - 3rem), 0 100%);
+          height: calc(50vh + 3rem);
+          width: 100%;
+      }
+      @media (min-width: 640px) {
+        .angled {
+          clip-path: polygon(0 0, 100% 0%, calc(50vw - 3rem) 100%, 0 100%);
+          height: auto;
+          padding-right: 6rem;
+          width: calc(50vw + 3rem);
+        }
       }
     </style>
   </head>
   <body>
+    {{ include('_components/header/header') }}
+
+    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
+
+      <h1 class="inline-block font-title text-4xl sm:text-6xl lg:text-7xl leading-tight font-extrabold tracking-tight mt-10 mb-8 sm:mt-14 sm:mb-10 bg-gradient-to-b sm:bg-gradient-to-r from-teal-900 to-blue-400 bg-clip-text text-transparent">Projects</h1>
+
+      <section id="data-analytics">
+        <h2 class="font-title2 uppercase text-l lg:text-xl text-blue-400">Data analytics</h2>
+        <p class="font-title text-teal-900 text-2xl sm:text-3xl lg:text-5xl font-extraboldz tracking-tight mb-8">Dynamic dashboards for real-time decision making</p>
+        <p class="max-w-4xl text-lg sm:text-xl lg:text-2xl font-medium lg:leading-10 space-y-6 mb-6 text-gray-500">Data often comes from multiple sources and spreadsheets of raw numbers can be overwhelming. Custom dashboards blend this data into visually appealing reports that display the most critical data at a glance, so strategic marketers can make key business decisions with confidence.</p>
+
+        <div class="grid abstract-frame mt-16">
+          <div class="col-start-2 col-end-4 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 flex">
+            <div class="bg-gradient-to-bl from-blue-200 to-blue-400 w-full flex-none rounded-6xl border-teal-700 transform skew-x-12"></div>
+            <div class="w-full flex-none -ml-full p-6 rounded-tl-6xl rounded-br-6xl transform shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 -rotate-2 -skew-x-12"></div>
+          </div>
+          <div class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4 lg:row-start-1 lg:row-end-5 self-center pb-8 lg:pb-0 md:rounded-xl">
+            <div class="relative overflow-hidden md:rounded-xl shadow-2xl flex bg-gradient-to-b from-blue-800 to-teal-900" style="height:300px;border-radius: 0.75rem;/* background: rgba(255,255,255,1); */">
+              <div class="relative w-full flex flex-col transform -skew-x-0 md:rounded-xl bg-white p-4 m-4">
+                Insert image here
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="data-analytics">
+        <h2 class="font-title2 uppercase text-l lg:text-xl text-blue-400">Lynn University</h2>
+        <p class="font-title text-teal-900 text-2xl sm:text-3xl lg:text-5xl font-extraboldz tracking-tight mb-8">Subtitle</p>
+        <p class="max-w-4xl text-lg sm:text-xl lg:text-2xl font-medium lg:leading-10 space-y-6 mb-6 text-gray-500">Description</p>
+        <a href="https://www.lynn.edu" class="inline-flex underline hover:no-underline text-lg sm:text-2xl font-medium border-2 border-white hover:border-blue-800 rounded-tl-3xl rounded-br-3xl hover:bg-blue-800 hover:text-white focus:bg-blue-800 focus:text-white -ml-4 px-4 ">View lynn.edu</a>
+
+        <div class="grid abstract-frame mt-16">
+          <div class="col-start-2 col-end-4 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 flex">
+            <div class="bg-gradient-to-bl from-blue-200 to-blue-400 w-full flex-none rounded-6xl border-teal-700 transform skew-x-12"></div>
+            <div class="w-full flex-none -ml-full p-6 rounded-tl-6xl rounded-br-6xl transform shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 -rotate-2 -skew-x-12"></div>
+          </div>
+          <div class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-2 lg:col-end-4 row-start-3 row-end-4 lg:row-start-1 lg:row-end-5 self-center pb-8 lg:pb-0 md:rounded-xl">
+            <div class="relative overflow-hidden md:rounded-xl shadow-2xl flex bg-gradient-to-b from-blue-800 to-teal-900" style="height:300px;border-radius: 0.75rem;/* background: rgba(255,255,255,1); */">
+              <div class="relative w-full flex flex-col transform -skew-x-0 md:rounded-xl bg-white p-4 m-4">
+                Insert image here
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid abstract-frame">
+        <div class="col-start-2 col-end-4 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 flex">
+          <div class="bg-gradient-to-bl from-blue-200 to-blue-400 w-full flex-none rounded-6xl border-teal-700 transform skew-x-12"></div>
+          <div class="w-full flex-none -ml-full p-6 rounded-tl-6xl rounded-br-6xl transform shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 -rotate-2 -skew-x-12"></div>
+        </div>
+        <div class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-1 lg:row-end-5 self-center pb-8 lg:pb-0 transform -skew-x-6 md:rounded-xl">
+          <div class="relative overflow-hidden md:rounded-xl shadow-2xl flex bg-gradient-to-b from-blue-800 to-teal-900" style="height:300px;border-radius: 0.75rem;/* background: rgba(255,255,255,1); */">TESTING
+          </div>
+        </div>
+
+        <div class="col-start-2 col-end-4 row-start-2 row-end-3 p-4 block max-w-full z-10 self-center font-title2 text-3xl text-blue-800" style="/* z-index: auto; */display: flex;">Project title</div>
+      </div>
+
+
+  <div class="grid GradientLockup_root__sBkgs">
+    <div class="col-start-2 col-end-3 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 lg:row-end-5 lg:py-10 xl:py-16 flex -mr-8 pl-4 sm:mr-0 sm:pl-0" style="* flex-direction: column; */">
+      <div class="bg-gradient-to-bl from-blue-200 to-blue-400 w-full flex-none rounded-3xl border-teal-700 transform  skew-x-12" style="border-radius: 50px; /* display: none; */ /* background: transparent; */"></div>
+      <div class="w-full flex-none -ml-full rounded-3xl transform shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 -rotate-2 -skew-x-12" style="/* margin-left: -100%; */ border-radius: 50px 0; /* border: 2px solid; */padding: 24px; /* background: transparent; */margin-left: -100%;"></div>
+    </div>
+    <div class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0 transform -skew-x-6 md:rounded-xl">
+      <div class="relative overflow-hidden md:rounded-xl shadow-2xl flex CodeWindow_root__1fMBP bg-gradient-to-b from-blue-800 to-teal-900" style="height:300px;border-radius: 0.75rem;/* background: rgba(255,255,255,1); */">
+        <div class="relative w-full flex flex-col transform -skew-x-0 md:rounded-xl" style="background: white;/* left: -8px; *//* top: -8px; */z-index: 2;padding: 18px;margin: 16px;">hi</div><div class="absolute inset-0 bg-black bg-opacity-75" style="z-index: 1;top: 8px;left: 8px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid GradientLockup_root__sBkgs">
+    <div class="col-start-2 col-end-3 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 lg:row-end-5 lg:py-10 xl:py-16 flex -mr-8 pl-4 sm:mr-0 sm:pl-0" style="
+    /* flex-direction: column; */
+">
+      <div class="bg-gradient-to-bl from-blue-200 to-blue-400 w-full flex-none rounded-3xl border-teal-700 transform  skew-x-12" style="
+    border-radius: 50px;
+    /* display: none; */
+    /* background: transparent; */
+"></div>
+      <div class="w-full flex-none -ml-full rounded-3xl transform shadow-lg bg-gradient-to-br from-gray-100 to-gray-300 -rotate-2 -skew-x-12" style="
+    /* margin-left: -100%; */
+    border-radius: 50px 0;
+    /* border: 2px solid; */
+    padding: 24px;
+    /* background: transparent; */
+    margin-left: -100%;
+"></div>
+    </div><div class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0 transform -skew-x-6 md:rounded-xl" style="
+    /* opacity: .2; */
+    /* border-radius: 0 0.75rem; */
+    /* border-top-width: 0; */
+    /* border-left-width: 0; */
+    /* border-bottom: 0; */
+    /* border-right: 0; */
+">
+      <div class="relative overflow-hidden md:rounded-xl shadow-2xl flex CodeWindow_root__1fMBP bg-gradient-to-b from-blue-800 to-teal-900" style="height:300px;border-radius: 0.75rem;/* background: rgba(255,255,255,1); */">
+        <div class="relative w-full flex flex-col transform -skew-x-0 md:rounded-xl" style="
+    background: white;
+    /* left: -8px; */
+    /* top: -8px; */
+    z-index: 2;
+    padding: 18px;
+    margin: 16px;
+">hi</div><div class="absolute inset-0 bg-black bg-opacity-75" style="
+    z-index: 1;
+    top: 8px;
+    left: 8px;
+"></div>
+        
+      </div>
+    </div>
+    
+
+<div class="col-start-2 col-end-3 row-start-3 row-end-4 z-10 self-center font-title2 text-3xl text-blue-800" style="/* z-index: auto; */display: flex;">Project title</div>
+  </div>
+
+<div>
+  <p>Maintenance or “hotfix” branches are used to quickly patch production releases. Hotfix branches are a lot like release branches and feature branches except they're based on master instead of develop. This is the only branch that should fork directly off of master. As soon as the fix is complete, it should be merged into both master and develop (or the current release branch), and master should be tagged with an updated version number.
+    </p>
+    <p>
+Having a dedicated <a href="/">line of development</a> for bug fixes lets your team address issues without interrupting the rest of the workflow or waiting for the next release cycle. You can think of maintenance branches as ad hoc release branches that work directly with master. A hotfix branch can be created using the following methods:</p>
+<p>Without the git-flow extensions:</p>
+</div>
+</div>
+
+
+
+
+    
     <div class="flex h-20 bg-gray-300">
-      <div class="flex-initial flex flex-col items-stretch justify-center bg-teal-900 pr-24 angled">
+      <div class="flex-initial flex flex-col items-center justify-center bg-teal-900 pr-24 angled">
         <div class="self-center justify-self-center text-gray-300">
           <h1 class="font-title font-black leading-none" style="font-size: 30px">Matt Williams</h1>
           <p class="font-title2 text-base">User experience designer</p>
         </div>
       </div>
-      <div class="flex-1">
-      <p>some text goes in here</p>
+      <div class="flex-1 flex flex-col items-center justify-center">
+        <div>
+          {{ include('_components/social-icon/social-icon.twig', {
+              platform: 'github',
+              url:'https://github.com/raptureaid'
+            }) }}
+
+          {{ include('_components/social-icon/social-icon.twig', {
+              platform: 'linkedin',
+              url:'https://www.linkedin.com/in/matthew-williams-1a132a69'
+            }) }}
+        </div>
       </div>
     </div>
   </body>
