@@ -1,7 +1,7 @@
-dateModified: 1615399989
+dateModified: 1615412799
 email:
   fromEmail: $EMAIL_ADDRESS
-  fromName: $EMAIL_ADDRESS
+  fromName: $EMAIL_CONTACT
   replyToEmail: null
   template: null
   transportSettings:
