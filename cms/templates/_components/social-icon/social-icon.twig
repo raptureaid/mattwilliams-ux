@@ -4,9 +4,10 @@
   {% set title = title ?? null %}
 
   {% if url and platform %}
-    <a class="social-icon" href="{{ url(url) }}">
+    <a class="inline-block m-2 pt-1 text-teal-900 hover:text-blue-800 transform underline-from-center" href="{{ url(url) }}">
       {{~ include('_components/svg/' ~ platform|lower, {
-          title: title
+          title: title,
+          attributes: {class: ["h-6 w-6"]}
         }) ~}}
     </a>
   {% endif %}
