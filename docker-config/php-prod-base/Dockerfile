@@ -1,14 +1,16 @@
-FROM php:7.3-fpm
+FROM php:7.4.3-fpm
 
 # Install packages
 RUN apt-get update \
     # apt Debian packages
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
         apt-utils \
         autoconf \
         ca-certificates \
         curl \
         g++ \
+        git-all \
+        libonig-dev \
         libbz2-dev \
         libfreetype6-dev \
         libicu-dev \
@@ -26,7 +28,7 @@ RUN apt-get update \
         redis \
     # configure PHP extensions
     && docker-php-ext-configure \
-        gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+        gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
     # install PHP extensions
     && docker-php-ext-install \
         bcmath \

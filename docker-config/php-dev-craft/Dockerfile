@@ -1,9 +1,9 @@
-FROM raptureaid/php-dev-base
+FROM raptureaid/php-dev-base:7.4.3
 
 # Install packages
 RUN apt-get update \
     # apt Debian packages
-    && apt-get install -y \
+    && apt-get install -y --no-install-recommends \
         gifsicle \
         jpegoptim \
         mariadb-client \
