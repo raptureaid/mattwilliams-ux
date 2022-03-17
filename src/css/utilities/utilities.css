@@ -1,3 +1,21 @@
+@variants responsive {
+  .angled-b {
+    clip-path: polygon(0 0, 100% 0%, 100% calc(50vh - 3rem), 0 100%);
+    height: calc(50vh + 3rem);
+    width: 100%;
+  }
+
+  .angled-r {
+    clip-path: polygon(0 0, 100% 0%, calc(50vw - 3rem) 100%, 0 100%);
+    height: auto;
+    padding-right: 6rem;
+    width: calc(50vw + 3rem);
+  }
+}
+
+
+
+
 .underline-from-center,
 .underline-from-left,
 .underline-from-right {

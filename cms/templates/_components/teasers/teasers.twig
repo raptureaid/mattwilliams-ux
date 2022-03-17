@@ -1,0 +1,7 @@
+{% apply spaceless %}
+  {{ image
+      ? featured == 1
+        ? include('/_components/teasers/teaser-image-large.twig')
+        : include('/_components/teasers/teaser-image-small.twig')
+      : include('/_components/teasers/teaser-text.twig') }}
+{% endapply %}

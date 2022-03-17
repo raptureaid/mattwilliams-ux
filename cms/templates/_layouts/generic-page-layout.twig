@@ -1,0 +1,18 @@
+{% extends "_layouts/html5.twig" %}
+
+{% block body %}
+  {{ include("_components/header") }}
+
+  <main>
+    {% block main %}
+      <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4">
+        {% block mainTitle %}
+          <h1 class="inline-block font-title text-4xl sm:text-6xl lg:text-7xl leading-tight font-extrabold tracking-tight mt-10 mb-8 sm:mt-14 sm:mb-10 bg-gradient-to-b sm:bg-gradient-to-r from-teal-900 to-blue-400 bg-clip-text text-transparent">{{ entry.title }}</h1>
+        {% endblock mainTitle %}
+
+        {% block mainContent %}
+        {% endblock mainContent %}
+      </div>
+    {% endblock main %}
+  </main>
+{% endblock body %}

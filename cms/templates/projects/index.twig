@@ -1,0 +1,71 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% set docTitle = "Work by Matt Williams - UX designer" %}
+
+{% set entry = {title: 'Projects'} %}
+
+{%- set projects = craft.entries()
+    .section('projects')
+    .type('projects')
+    .limit(null)
+    .all() -%}
+
+{% block mainContent %}
+  <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44">
+  {% for project in projects %}
+    {% set title = project.title %}
+    {% set id = title|kebab %}
+    {% set subtitle = project.subtitle %}
+    {% set description = project.description %}
+
+    {% set image = project.images[0] ?? null %}
+    {% set descendants = craft.entries().descendantOf(project).all() %}
+
+    <section id="{{ id }}">
+      {{ include('/_components/teasers/teasers.twig', {
+          featured: descendants|length ?: null
+      }) }}
+
+      {#~ Case studies ~#}
+      {% css %}
+        .card:hover img {
+          transform: scale(1.5);
+        }
+      {% endcss %}
+      <div class="grid grid-cols-2 gap-8">
+        {% for descendant in descendants %}
+        <div class="filter grayscale blur-md contrast-200">
+          <img src="{{ descendant.images[0].url }}"
+                width="{{ descendant.images[0].width }}"
+                height="{{ descendant.images[0].height }}"
+                class="filter grayscale blur-md contrast-200"
+            >
+        </div>
+          <a href="{{ descendant.url }}" class="card flex flex-col relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-100 to-gray-300">
+            <img src="{{ descendant.images[0].url }}"
+                width="{{ descendant.images[0].width }}"
+                height="{{ descendant.images[0].height }}"
+                class="filter grayscale"
+            >
+            <h3 class="">
+              {{- descendant.title -}}
+            </h3>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {# <section id="{{ id }}">
+      <h2 class="font-title2 uppercase text-l lg:text-xl text-blue-400">{{ title }}</h2>
+      <p class="font-title text-teal-900 text-2xl sm:text-3xl lg:text-5xl tracking-tight mb-8">{{ subtitle }}</p>
+      
+      <div class="grid grid-cols-4 gap-16">
+        <div class="col-span-2 max-w-4xl text-lg sm:text-xl lg:text-2xl font-medium lg:leading-10 space-y-6 mb-6 text-gray-500">{{ description|markdown }}</div>
+
+        <div class="col-span-2">
+          {{ include('/_components/abstract-frame.twig') }}
+        </div>
+      </div>
+    </section> #}
+  {% endfor %}
+  </div>
+{% endblock mainContent %}

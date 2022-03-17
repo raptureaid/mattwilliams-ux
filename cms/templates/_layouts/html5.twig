@@ -1,0 +1,31 @@
+{% apply spaceless %}
+  <!DOCTYPE html>
+  <html lang="{{ craft.app.language |slice(0,2) }}" {{ attr(htmlAttributes ?? {}) }}>
+    <head>
+      {% block head %}
+        <title>{{ docTitle ?? siteName }}</title>
+        {% block headMeta %}
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,minimum-scale=1">
+        {% endblock headMeta %}
+
+        {% block headLinks %}
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="/assets/css/styles.css">
+        {% endblock headLinks %}
+
+        {% block headCss %}
+        {% endblock headCss %}
+
+        {% block headJs %}
+        {% endblock headJs %}
+      {% endblock head %}
+    </head>
+    <body {{ attr(bodyAttributes ?? {}) }}>
+      {% block body %}
+      {% endblock body %}
+    </body>
+  </html>
+{% endapply %}

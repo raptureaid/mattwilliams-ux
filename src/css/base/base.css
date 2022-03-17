@@ -6,6 +6,6 @@ a {
 
 
 .abstract-frame {
-  grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+  grid-template-columns: 1rem repeat(2, 1fr) 1rem;
   grid-template-rows: 2.25rem auto auto 2.25rem;
 }

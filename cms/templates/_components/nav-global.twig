@@ -1,0 +1,20 @@
+{% apply spaceless %}
+  {% set navItems = [
+      {title: 'About', path: 'about'},
+      {title: 'Work', path: 'work'},
+      {title: 'Blog', path: 'blog'},
+  ] %}
+  {% set orientation = orientation ?? 'row' %}
+
+  {% if navItems %}
+    <nav class="w-full overflow-x-auto">
+      <ul class="flex {{ orientation == 'dynamic' ? 'flex-col xs:flex-row' : 'flex-row' }} items-center justify-between 2xs:justify-evenly mx-1">
+        {% for item in navItems %}
+          <li class="m-1">
+            <a href="{{ item.path }}" class="font-title pt-1 px-1 text-teal-900 hover:text-blue-800 underline-from-left">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endapply %}

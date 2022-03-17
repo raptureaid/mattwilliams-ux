@@ -1,48 +1,24 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Matt Williams - User experience designer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <style>
-      .angled {
-          clip-path: polygon(0 0, 100% 0%, 100% calc(50vh - 3rem), 0 100%);
-          height: calc(50vh + 3rem);
-          width: 100%;
-      }
-      @media (min-width: 640px) {
-        .angled {
-          clip-path: polygon(0 0, 100% 0%, calc(50vw - 3rem) 100%, 0 100%);
-          height: auto;
-          padding-right: 6rem;
-          width: calc(50vw + 3rem);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flex flex-col sm:flex-row h-screen bg-gray-300">
-      <div class="flex-initial flex flex-col items-center justify-center bg-teal-900 bg-gradient-to-b sm:bg-gradient-to-r from-teal-900 to-blue-800 angled">
-        <div class="m-5 self-center justify-self-center text-gray-300">
-          <h1 class="font-title font-black leading-none text-3xl md:text-5xl lg:text-6xl whitespace-nowrap"=>Matt Williams</h1>
-          <p class="font-title2 text-base md:text-2xl md:tracking-wide lg:tracking-normal lg:text-3xl whitespace-nowrap">User experience designer</p>
-        </div>
-      </div>
-      <div class="flex-1 flex flex-col items-center justify-center">
-        <div>
-          {{ include('_components/social-icon/social-icon.twig', {
-              platform: 'github',
-              url:'https://github.com/raptureaid'
-            }) }}
+{% extends "_layouts/html5.twig" %}
 
-          {{ include('_components/social-icon/social-icon.twig', {
-              platform: 'linkedin',
-              url:'https://www.linkedin.com/in/matthew-williams-1a132a69'
-            }) }}
-        </div>
+{% set docTitle = "Matt Williams - User experience designer" %}
+
+{% block body %}
+  <main class="flex flex-col sm:flex-row bg-gray-300 h-screen">
+    <div class="flex-initial flex flex-col items-center justify-center bg-teal-900 bg-gradient-to-b sm:bg-gradient-to-r from-teal-900 to-blue-800 angled-b sm:angled-r">
+      <div class="m-5 self-centerjustify-self-center text-gray-300">
+        <h1 class="font-title font-black leading-none text-3xl md:text-5xl lg:text-6xl 2xs:whitespace-nowrap"=>Matt Williams</h1>
+        <div class="font-title2 text-base md:text-2xl md:tracking-wide lg:tracking-normal lg:text-3xl 2xs:whitespace-nowrap">User experience designer</div>
       </div>
     </div>
-  </body>
-</html>
+    <div class="flex-1 flex flex-col items-center justify-start xs:justify-center">
+      <div class="-mt-4 xs:-mt-16 sm:mt-0 text-2xl leading-none w-full">
+        {{ include('_components/nav-global.twig', {
+            orientation: 'dynamic'
+        }) }}
+      </div>
+      <div class="absolute bottom-0">
+        {{ include('_components/social-media-list') }}
+      </div>
+    </div>
+  </main>
+{% endblock body %}

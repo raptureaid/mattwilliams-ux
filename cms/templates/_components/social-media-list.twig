@@ -1,0 +1,25 @@
+{% apply spaceless %}
+  {% set accounts = accounts ?? [
+      {
+        platform: 'github',
+        url: 'https://github.com/raptureaid',
+      },
+      {
+        platform: 'linkedin',
+        url: 'https://www.linkedin.com/in/matthew-williams-1a132a69',
+      },
+    ] %}
+  
+  {% if accounts %}
+    <ul class="flex flex-row">
+      {% for account in accounts %}
+      <li>
+        {{ include('_components/social-icon', {
+            platform: account.platform,
+            url: account.url
+          }) }}
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endapply %}

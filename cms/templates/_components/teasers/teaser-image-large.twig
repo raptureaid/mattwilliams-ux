@@ -1,0 +1,12 @@
+<h2 class="font-title2 uppercase text-l lg:text-xl text-blue-400">
+  {{- title -}}
+</h2>
+<p class="font-title text-teal-900 text-2xl sm:text-3xl lg:text-5xl tracking-tight mb-8">
+  {{- subtitle -}}
+</p>
+<div class="my-8">
+  {{ include('/_components/abstract-frame.twig') }}
+</div>
+<div class="col-span-2 max-w-4xl text-lg sm:text-xl lg:text-2xl font-medium lg:leading-10 space-y-6 mb-6 text-gray-500">
+  {{- description|markdown -}}
+</div>
