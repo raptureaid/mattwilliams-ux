@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: projects
+name: Projects
+propagationMethod: all
+siteSettings:
+  e95e98ad-f5f5-4336-8cf9-a4826910cc6d: # $PRIMARY_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: projects/_entry
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: null
+  uid: f058f58a-2c3c-4a42-9315-50386133c53d
+type: structure

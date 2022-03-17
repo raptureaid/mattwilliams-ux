@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 5cf35f50-ed52-4a72-ab24-3f68deb6d9d3 # Plain text
+handle: subtitle
+instructions: ''
+name: Subtitle
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
